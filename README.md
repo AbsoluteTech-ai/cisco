@@ -1,6 +1,6 @@
 Automated Networking
 
-Decentralised Repositories via a python REPL called RADkit
+Decentralised Repositories via a python REPL CI/CD called RADkit 
 
 Install RADkit from https://radkit.cisco.com/downloads/release/
 
