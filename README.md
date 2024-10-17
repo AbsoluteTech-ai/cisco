@@ -12,12 +12,12 @@ which python
 
 python3 -m venv .venv
 
-source /home/svc_radkit_su/.local/radkit/versions/#/venv/bin/activate 
+source /home/svc_radkit_su/.local/radkit/versions/1.#/venv/bin/activate 
 
 radkit-service run (this will show real-time status)
 
 Can execute scripts outside of REPL with scripts in seperate window 
-cd ~/.local/radkit/versions/#/venv/bin
+cd ~/.local/radkit/versions/1.#/venv/bin
 
 radkit-client script rk-update-https.py
 
