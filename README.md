@@ -21,4 +21,4 @@ cd ~/.local/radkit/versions/1.#/venv/bin
 
 **radkit-client script rk-update-https.py**
 
-**radkit-client script rk-update-ssh&ciphers.py**
+**radkit-client script rk-update-sshciphers.py**
