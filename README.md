@@ -12,7 +12,7 @@ Once devices added and verified with **service.inventory**
 
 **python3 -m venv .venv**
 
-**source /home/svc_radkit_su/.local/radkit/versions/1.#/venv/bin/activate **
+**source /home/svc_radkit_su/.local/radkit/versions/1.#/venv/bin/activate**
 
 radkit-service run (this will show real-time status)
 
