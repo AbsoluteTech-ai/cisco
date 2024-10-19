@@ -1,11 +1,8 @@
-
-##
 <code copy>Automated Networking</code>
-## code/text here
 
-# &lt;clipboard-copy&gt; element
+## Usage
 
-Copy element text content or input values to the clipboard.
+Decentralised Repositories via a python REPL CI/CD called RADKit using rotating APIs
 
 ## Installation
 
@@ -15,10 +12,6 @@ $ radkit-client script rk-update-https.py
 ```
 $ radkit-client script rk-update-sshciphers.py
 ```
-## Usage
-
-
-Decentralised Repositories via a python REPL CI/CD called RADkit 
 
 Install RADkit from https://radkit.cisco.com/downloads/release/
 
@@ -36,9 +29,5 @@ Once devices added and verified with **service.inventory**
 
 Can execute scripts outside of REPL with scripts in seperate window 
 **cd ~/.local/radkit/versions/1.#/venv/bin**
-
-**    radkit-client script rk-update-https.py**
-
-**    radkit-client script rk-update-sshciphers.py**
 
 **deactivate**
