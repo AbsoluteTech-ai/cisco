@@ -28,3 +28,15 @@ Can execute scripts outside of REPL with scripts in seperate window
 ##
 <code copy>your code snippet or text here</code>
 ## code/text here
+
+# &lt;clipboard-copy&gt; element
+
+Copy element text content or input values to the clipboard.
+
+## Installation
+
+```
+$ npm install --save @github/clipboard-copy-element
+```
+
+## Usage
