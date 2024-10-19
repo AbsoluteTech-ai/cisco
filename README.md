@@ -6,14 +6,7 @@ Decentralised Repositories via a python REPL CI/CD called RADKit using rotating 
 
 ## Installation
 
-```
-$ radkit-client script rk-update-https.py
-```
-```
-$ radkit-client script rk-update-sshciphers.py
-```
-
-Install RADkit from https://radkit.cisco.com/downloads/release/
+Install RADKit from https://radkit.cisco.com/downloads/release/
 
 Once devices added and verified with **service.inventory**
 
@@ -29,5 +22,12 @@ Once devices added and verified with **service.inventory**
 
 Can execute scripts outside of REPL with scripts in seperate window 
 **cd ~/.local/radkit/versions/1.#/venv/bin**
+
+```
+$ radkit-client script rk-update-https.py
+```
+```
+$ radkit-client script rk-update-sshciphers.py
+```
 
 **deactivate**
