@@ -126,4 +126,4 @@ def check_and_update_http_servers(devices):
 
 # Call the function
 service = direct_login()
-check_and_update_http_servers(service.inventory
+check_and_update_http_servers(service.inventory)
