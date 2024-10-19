@@ -1,4 +1,22 @@
-Automated Networking
+
+##
+<code copy>Automated Networking</code>
+## code/text here
+
+# &lt;clipboard-copy&gt; element
+
+Copy element text content or input values to the clipboard.
+
+## Installation
+
+```
+$ radkit-client script rk-update-https.py
+```
+```
+$ radkit-client script rk-update-sshciphers.py
+```
+## Usage
+
 
 Decentralised Repositories via a python REPL CI/CD called RADkit 
 
@@ -24,21 +42,3 @@ Can execute scripts outside of REPL with scripts in seperate window
 **    radkit-client script rk-update-sshciphers.py**
 
 **deactivate**
-
-##
-<code copy>your code snippet or text here</code>
-## code/text here
-
-# &lt;clipboard-copy&gt; element
-
-Copy element text content or input values to the clipboard.
-
-## Installation
-
-```
-$ radkit-client script rk-update-https.py
-```
-```
-$ radkit-client script rk-update-sshciphers.py
-```
-## Usage
