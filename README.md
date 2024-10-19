@@ -26,4 +26,4 @@ Can execute scripts outside of REPL with scripts in seperate window
 **deactivate**
 
 ##
-<tab><tab>code/text here
+<code copy>your code snippet or text here</code>
