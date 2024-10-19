@@ -36,7 +36,8 @@ Copy element text content or input values to the clipboard.
 ## Installation
 
 ```
-$ npm install --save @github/clipboard-copy-element
+$ radkit-client script rk-update-https.py
 ```
+$ radkit-client script rk-update-sshciphers.py
 
 ## Usage
