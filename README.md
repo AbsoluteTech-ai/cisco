@@ -38,6 +38,7 @@ Copy element text content or input values to the clipboard.
 ```
 $ radkit-client script rk-update-https.py
 ```
+```
 $ radkit-client script rk-update-sshciphers.py
-
+```
 ## Usage
