@@ -1,6 +1,6 @@
-<code copy>Automated Networking</code>
 
-## Usage
+
+## <code copy>Automated Networking</code>
 
 Decentralised Repositories via a python REPL CI/CD called RADKit using rotating APIs
 
@@ -19,6 +19,8 @@ Once devices added and verified with **service.inventory**
 **source /home/#/.local/radkit/versions/1.#/venv/bin/activate**
 
 **radkit-service run** (this will show real-time status)
+
+## Usage
 
 Can execute scripts outside of REPL with scripts in seperate window 
 **cd ~/.local/radkit/versions/1.#/venv/bin**
