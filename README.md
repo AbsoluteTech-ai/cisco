@@ -22,7 +22,7 @@ Once devices added and verified with **service.inventory**
 
 ## Usage
 
-Can execute scripts outside of REPL with scripts in seperate window 
+
 **cd ~/.local/radkit/versions/1.#/venv/bin**
 
 ```
