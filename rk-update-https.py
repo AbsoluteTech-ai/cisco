@@ -81,9 +81,9 @@ def check_and_update_http_servers(devices):
         if http_enabled:
             commands_to_configure.append("no ip http server")
 
-        # If HTTPS is disabled, enable it
-        if not https_enabled:
-            commands_to_configure.append("ip http secure-server")
+        # If HTTPS is enabled, disable it
+        if https_enabled:
+            commands_to_configure.append("no ip http secure-server")
 
         if commands_to_configure:
             # Prepare full configuration command list
@@ -106,8 +106,8 @@ def check_and_update_http_servers(devices):
                         # Determine if the update was successful
                         if recheck_http_enabled:
                             print(colorize(f"Device {name} failed to disable HTTP.", RED))
-                        elif not recheck_https_enabled:
-                            print(colorize(f"Device {name} failed to enable HTTPS.", RED))
+                        elif recheck_https_enabled:
+                            print(colorize(f"Device {name} failed to disable HTTPS.", RED))
                         else:
                             print(colorize(f"Device {name} successfully updated.", GREEN))
                             updated_devices.append(name)
