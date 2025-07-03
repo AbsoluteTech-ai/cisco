@@ -54,16 +54,17 @@ app-resource profile custom
 cpu 1000
 memory 384
 persist-disk 3
+exit
 name-server0 #
 
 interface VirtualPortGroup#
 ip address # #
 ip nat inside 
-interface gig #
+interface #
 ip nat outside 
 end
 
-ip nat inside source list GS_NAT interface gig # overload 
+ip nat inside source list GS_NAT interface # overload 
 ip access-list standard GS_NAT
 10 permit # #
 
@@ -72,10 +73,21 @@ guestshell portforwarding add table-entry RADKIT service tcp source-port 8081 de
 guestshell run bash
 
 ls -ltr
-chmod +x cisco_radkit_1.8.5_linux_x86_64.sh -keep
+chmod +x cisco_radkit_1.8.5_linux_x86_64.sh 
+
+./cisco_radkit_1.8.5_linux_x86_64.sh -keep
 
 Verify RADKit & BOOTSTRAP to create a superadmin pw and initiate RK DB
 
 radkit-service --version
 /home/guestshell/.local/bin/radkit-service bootstrap
+
+systemctl enable radkit
+
+show iox-service
+systemctl start radkit
+
 ```
+
+show iox-service
+systemctl start radkit
