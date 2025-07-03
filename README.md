@@ -88,6 +88,3 @@ show iox-service
 systemctl start radkit
 
 ```
-
-show iox-service
-systemctl start radkit
