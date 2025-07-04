@@ -64,12 +64,11 @@ interface #
 ip nat outside 
 end
 
-ip nat inside source list GS_NAT interface # overload 
-ip access-list standard GS_NAT
-10 permit # #
+ip nat inside source static tcp # 8081 # 8081 no-payload extendable stateless
 
 guestshell enable
 guestshell portforwarding add table-entry RADKIT service tcp source-port 8081 destination-port 8081
+(only for docker via mgmt)
 guestshell run bash
 
 ls -ltr
