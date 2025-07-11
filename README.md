@@ -53,7 +53,7 @@ interface Vlan10
  no shut
 exit 
 
-ip route 0.0.0.0 10.10.10.1
+ip route 0.0.0.0 0.0.0.0 10.10.10.1
 
 vlan 4094
 
