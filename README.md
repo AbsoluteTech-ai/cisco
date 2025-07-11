@@ -44,31 +44,50 @@ $ radkit-client script rk-update-sshciphers.py
 
 ```
 $ conf t
-iox 
-app-hosting appid guestshell 
-app-vnic gateway# virtualportgroup # guest-interface #
-  guest-ipaddress # netmask #
-app-default-gateway # guest-interface #
 
-app-resource profile custom
-cpu 1000
-memory 384
-persist-disk 3
+vlan 10
+
+interface Vlan10
+ ip address 10.10.10.10 255.255.255.0
+ ip nat outside
+ no shut
+exit 
+
+ip route 0.0.0.0 10.10.10.1
+
+vlan 4094
+
+interface vlan4094 
+ip address 192.168.35.1 255.255.255.0
+ip nat inside
+no shut
 exit
-name-server0 #
 
-interface VirtualPortGroup#
-ip address # #
-ip nat inside 
-interface #
-ip nat outside 
-end
+interface AppGigabitEthernet2/0/1
+switchport mode trunk
+no shut
 
-ip nat inside source static tcp # 8081 # 8081 no-payload extendable stateless
+vlan 
+iox 
+app-hosting appid guestshell
+ app-vnic AppGigabitEthernet trunk
+  vlan 4094 guest-interface 0
+   guest-ipaddress 192.168.35.2 netmask 255.255.255.0
+ app-default-gateway 192.168.35.1 guest-interface 0
+ app-resource profile custom
+  cpu 1000
+  memory 384
+  persist-disk 3
+ name-server0 10.10.10.5
+
+exit
+
+ip nat inside source static tcp 192.168.35.2 8082 10.10.10.10 8082 no-payload extendable stateless
+ip nat inside source list GS_NAT interface Vlan10 overload
+ip access-list standard GS_NAT
+10 permit 192.168.35.0 0.0.0.255
 
 guestshell enable
-guestshell portforwarding add table-entry RADKIT service tcp source-port 8081 destination-port 8081
-(only for docker via mgmt)
 guestshell run bash
 
 ls -ltr
